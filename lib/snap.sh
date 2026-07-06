@@ -25,10 +25,9 @@ install_snap_apps() {
         "notion-snap-reborn:Notion"
         "trello-desktop:Trello"
         "whatsapp-linux-desktop:WhatsApp"
-        "deepseek-desktop:DeepSeek"
         "android-studio --classic:Android Studio"
-        "opera:Opera"
-        "spotify:Spotify"
+        "brave:Brave"
+        "sidra:Sidra"
         "slack --classic:Slack"
         "telegram-desktop:Telegram"
     )

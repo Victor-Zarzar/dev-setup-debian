@@ -81,6 +81,28 @@ install_brew_packages() {
         run_command "brew install mysql" "MySQL installed"
     fi
 
+    if brew list postgresql@17 &> /dev/null; then
+        print_info "PostgreSQL already installed"
+
+        if [ ! -f "/home/linuxbrew/.linuxbrew/var/postgresql@17/PG_VERSION" ]; then
+            print_warning "PostgreSQL package is installed, but the database cluster wasn't initialized (known Homebrew postinstall issue)"
+            print_warning "Run manually: initdb --locale=en_US.UTF-8 -E UTF-8 /home/linuxbrew/.linuxbrew/var/postgresql@17"
+        fi
+    else
+        run_command "brew install postgresql@17" "PostgreSQL installed"
+
+        if [ ! -f "/home/linuxbrew/.linuxbrew/var/postgresql@17/PG_VERSION" ]; then
+            print_warning "PostgreSQL package installed, but the database cluster wasn't initialized (known Homebrew postinstall issue)"
+            print_warning "Run manually: initdb --locale=en_US.UTF-8 -E UTF-8 /home/linuxbrew/.linuxbrew/var/postgresql@17"
+        fi
+    fi
+
+    if brew list redis &> /dev/null; then
+        print_info "Redis already installed"
+    else
+        run_command "brew install redis" "Redis installed"
+    fi
+
     if brew list starship &> /dev/null; then
         print_info "Starship already installed"
     else

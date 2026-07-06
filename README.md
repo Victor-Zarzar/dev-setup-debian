@@ -1,3 +1,9 @@
+<h1 id="screenshot">Screenshots</h1>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/05a56792-6687-4031-8404-d0a53f2ccf8f" width="1000" height="600" alt="Screenshot">
+</p>
+
 # Debian/Ubuntu Development Environment Setup
 
 A modular, idempotent automated setup script for Debian/Ubuntu that installs and configures a complete development environment.
@@ -31,16 +37,17 @@ A modular, idempotent automated setup script for Debian/Ubuntu that installs and
 - Python: Pip, Venv, FastAPI, Uvicorn, Pyenv
 - Build tools: CMake, Automake, Ninja, Clang
 - OpenJDK 21, Nginx, OpenSSH Server
+- Kubernetes: kubectl, Minikube, eksctl
 
 ### Databases
 
-- SQLite, MySQL
+- SQLite, MySQL, PostgreSQL17, Redis
 
 ### Applications
 
-- **Snap**: Postman, ChatGPT, Notion, Trello, WhatsApp, Slack, Telegram, Spotify, DeepSeek
+- **Snap**: Postman, ChatGPT, Notion, Trello, WhatsApp, Slack, Telegram, Sidra (Apple Music)
 - **Flatpak**: LibreOffice, CPU-X, PDF Arranger
-- **Browsers**: Firefox, Google Chrome, Opera
+- **Browsers**: Firefox, Google Chrome, Brave
 
 ### Graphics & Drivers
 
@@ -55,7 +62,7 @@ A modular, idempotent automated setup script for Debian/Ubuntu that installs and
 
 - FVM (Flutter Version Manager)
 - NVM, Pyenv, Alembic
-- Starship, Nginx, MySQL, SQLite
+- Starship, Nginx, MySQL, SQLite, PostgreSQL17, Redis
 
 ## Requirements
 
@@ -66,8 +73,8 @@ A modular, idempotent automated setup script for Debian/Ubuntu that installs and
 ## Installation
 
 ```bash
-git clone https://github.com/Victor-Zarzar/script-setup-debian
-cd script-setup-debian
+git clone https://github.com/Victor-Zarzar/dev-setup-debian
+cd dev-setup-debian
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -75,17 +82,20 @@ chmod +x setup.sh
 ## Directory Structure
 
 ```
-debian-setup/
+dev-setup-debian/
 ├── setup.sh          # Main entry point
 ├── lib/
 │   ├── utils.sh      # Utility functions and logging
 │   ├── apt.sh        # APT package installations
+│   ├── colors.sh     # Color functions
 │   ├── snap.sh       # Snap package installations
 │   ├── flatpak.sh    # Flatpak package installations
 │   ├── brew.sh       # Homebrew installations
 │   ├── manual.sh     # Manual installations (Zed, Bun, fonts)
 │   ├── docker.sh     # Docker and Compose setup
+│   ├── devops.sh     # DevOps utility functions and logging
 │   ├── git.sh        # Git configuration
+│   ├── helpers.sh    # Helper functions
 │   ├── nvidia.sh     # Nvidia driver installation
 │   └── system.sh     # System configuration
 └── README.md
@@ -105,6 +115,7 @@ debian-setup/
  9) Install Snap applications
 10) Install Node.js tools
 11) Install Docker
+12) Install DevOps tools (Prometheus, Terraform, AWS CLI, kubectl, Minikube, eksctl)
 12) Install browsers
 13) Install fonts
 14) Install system tools
