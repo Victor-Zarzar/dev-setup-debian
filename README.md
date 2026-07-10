@@ -29,6 +29,8 @@ A modular, idempotent automated setup script for Debian/Ubuntu that installs and
 - Zsh with autosuggestions
 - Starship prompt (Homebrew)
 - Exa (modern ls replacement)
+- Bat (better cat replacement)
+- Zoxide (better cd replacement)
 
 ### Development Tools
 
@@ -90,8 +92,9 @@ dev-setup-debian/
 │   ├── colors.sh     # Color functions
 │   ├── snap.sh       # Snap package installations
 │   ├── flatpak.sh    # Flatpak package installations
+│   ├── fonts.sh      # Font installations
 │   ├── brew.sh       # Homebrew installations
-│   ├── manual.sh     # Manual installations (Zed, Bun, fonts)
+│   ├── manual.sh     # Manual installations (Zed, Bun)
 │   ├── docker.sh     # Docker and Compose setup
 │   ├── devops.sh     # DevOps utility functions and logging
 │   ├── git.sh        # Git configuration
@@ -116,18 +119,18 @@ dev-setup-debian/
 10) Install Node.js tools
 11) Install Docker
 12) Install DevOps tools (Prometheus, Terraform, AWS CLI, kubectl, Minikube, eksctl)
-12) Install browsers
-13) Install fonts
-14) Install system tools
-15) Install Flatpak applications
-16) Install databases
-17) Install Homebrew
-18) Install Homebrew packages
-19) Install Zsh
-20) Configure Git
-21) Install Bun
-22) Install Nvidia drivers
-23) View installation log
+13) Install browsers
+14) Install fonts (JetBrains Mono, Nerd, Fira, Cascadia, Hack)
+15) Install system tools
+16) Install Flatpak applications
+17) Install databases
+18) Install Homebrew
+19) Install Homebrew packages
+20) Install Zsh
+21) Configure Git
+22) Install Bun
+23) Install Nvidia drivers
+24) View installation log
  0) Exit
 ```
 

@@ -26,7 +26,12 @@ install_nvidia_drivers() {
     # Check if NVIDIA driver is already installed
     if command -v nvidia-smi &> /dev/null; then
         print_info "NVIDIA driver already installed"
-        nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -n1 | xargs -I {} print_info "Driver version: {}"
+
+        local driver_version
+        driver_version=$(nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -n1)
+        if [ -n "$driver_version" ]; then
+            print_info "Driver version: $driver_version"
+        fi
 
         echo -n "Do you want to reinstall/update NVIDIA drivers? (y/N): "
         read -r response
@@ -42,34 +47,25 @@ install_nvidia_drivers() {
     if [ "$distro" = "ubuntu" ] || [ "$distro" = "neon" ] || [ "$distro" = "pop" ] || [ "$distro" = "linuxmint" ]; then
         print_info "Ubuntu-based system detected"
         print_info "Checking available NVIDIA drivers..."
-
         ubuntu-drivers devices >> "$LOG_FILE" 2>&1
-
         print_info "Installing recommended NVIDIA driver..."
         run_command "sudo ubuntu-drivers autoinstall" "NVIDIA driver installed"
-
         print_warning "IMPORTANT: Reboot your system for changes to take effect"
         print_info "After reboot, verify with: nvidia-smi"
-
     elif [ "$distro" = "debian" ]; then
         print_info "Debian system detected"
         print_warning "Please ensure contrib non-free non-free-firmware repositories are enabled"
-
         run_command "sudo apt update" "Package lists updated"
         run_command "sudo apt install -y nvidia-driver firmware-misc-nonfree" "NVIDIA driver installed"
-
         print_warning "IMPORTANT: Reboot your system for changes to take effect"
         print_info "After reboot, verify with: nvidia-smi"
-
     else
         print_warning "Distribution '$distro' - attempting generic installation"
-
         if command -v ubuntu-drivers &> /dev/null; then
             run_command "sudo ubuntu-drivers autoinstall" "NVIDIA driver installed"
         else
             run_command "sudo apt install -y nvidia-driver" "NVIDIA driver installed"
         fi
-
         print_warning "IMPORTANT: Reboot your system for changes to take effect"
     fi
 
