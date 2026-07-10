@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/Victor-Zarzar/dev-setup-debian/compare/v1.0.0...v1.1.0) (2026-07-10)
+
+
+### Features
+
+* add new menu install fonts and fix nvidia.sh ([a18fd8d](https://github.com/Victor-Zarzar/dev-setup-debian/commit/a18fd8dd3c495cce178944fa59357d723a3e31e1))
+* add new menu install fonts and fix nvidia.sh ([a18fd8d](https://github.com/Victor-Zarzar/dev-setup-debian/commit/a18fd8dd3c495cce178944fa59357d723a3e31e1))
+* add new menu install fonts and fix nvidia.sh ([761a71e](https://github.com/Victor-Zarzar/dev-setup-debian/commit/761a71e776aa9dd88ebaf52f99302534900d0244))
+
 ## 1.0.0 (2026-07-06)
 
 
