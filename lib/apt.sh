@@ -92,16 +92,6 @@ install_browsers() {
     fi
 }
 
-install_fonts() {
-    print_section "Installing Fonts"
-
-    if ! dpkg -l | grep -q "^ii  fonts-jetbrains-mono"; then
-        run_command "sudo apt install -y fonts-jetbrains-mono" "JetBrains Mono font installed"
-    else
-        print_info "JetBrains Mono font already installed"
-    fi
-}
-
 install_system_tools() {
     print_section "Installing System Tools"
 
@@ -112,9 +102,9 @@ install_system_tools() {
     fi
 
     if ! dpkg -l | grep -q "^ii  nano"; then
-        run_command "sudo apt install -y nano exa" "Text editor and ls replacement"
+        run_command "sudo apt install -y nano" "Text editor"
     else
-        print_info "Nano and exa already installed"
+        print_info "Nano already installed"
     fi
 
     if ! dpkg -l | grep -q "^ii  kde-spectacle"; then

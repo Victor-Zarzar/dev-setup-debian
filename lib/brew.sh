@@ -128,6 +128,24 @@ install_brew_packages() {
         run_command "brew install alembic" "Alembic installed"
     fi
 
+    if brew list eza &> /dev/null; then
+        print_info "Eza already installed"
+    else
+        run_command "brew install eza" "Eza installed"
+    fi
+
+    if brew list bat &> /dev/null; then
+        print_info "Bat already installed"
+    else
+        run_command "brew install bat" "Bat installed"
+    fi
+
+    if brew list zoxide &> /dev/null; then
+        print_info "Zoxide already installed"
+    else
+        run_command "brew install zoxide" "Zoxide installed"
+    fi
+
     if ! grep -q 'NVM_DIR' "$HOME/.bashrc"; then
         cat >> "$HOME/.bashrc" << 'EOF'
 
@@ -159,6 +177,13 @@ EOF
         print_success "Starship added to .bashrc"
     else
         print_info "Starship already configured in .bashrc"
+    fi
+
+    if ! grep -q 'zoxide init' "$HOME/.bashrc"; then
+        echo 'eval "$(zoxide init bash)"' >> "$HOME/.bashrc"
+        print_success "Zoxide added to .bashrc"
+    else
+        print_info "Zoxide already configured in .bashrc"
     fi
 
     if ! grep -q 'zsh-autosuggestions' "$HOME/.zshrc" 2>/dev/null; then
