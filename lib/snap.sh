@@ -21,7 +21,6 @@ install_snap_apps() {
 
     local apps=(
         "postman:Postman"
-        "chatgpt-desktop:ChatGPT Desktop"
         "notion-snap-reborn:Notion"
         "trello-desktop:Trello"
         "whatsapp-linux-desktop:WhatsApp"
@@ -30,6 +29,8 @@ install_snap_apps() {
         "sidra:Sidra"
         "slack --classic:Slack"
         "telegram-desktop:Telegram"
+        "figma-linux:Figma"
+        "proton-vpn:Proton VPN"
     )
 
     for app in "${apps[@]}"; do

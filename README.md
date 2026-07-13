@@ -47,7 +47,7 @@ A modular, idempotent automated setup script for Debian/Ubuntu that installs and
 
 ### Applications
 
-- **Snap**: Postman, ChatGPT, Notion, Trello, WhatsApp, Slack, Telegram, Sidra (Apple Music)
+- **Snap**: Postman, Figma-App, Proton VPN, Notion, Trello, WhatsApp, Slack, Telegram, Sidra (Apple Music)
 - **Flatpak**: LibreOffice, CPU-X, PDF Arranger
 - **Browsers**: Firefox, Google Chrome, Brave
 
@@ -122,15 +122,16 @@ dev-setup-debian/
 13) Install browsers
 14) Install fonts (JetBrains Mono, Nerd, Fira, Cascadia, Hack)
 15) Install system tools
-16) Install Flatpak applications
-17) Install databases
-18) Install Homebrew
-19) Install Homebrew packages
-20) Install Zsh
-21) Configure Git
-22) Install Bun
-23) Install Nvidia drivers
-24) View installation log
+16) Install utility tools
+17) Install Flatpak applications
+18) Install databases
+19) Install Homebrew
+20) Install Homebrew packages
+21) Install Zsh
+22) Configure Git
+23) Install Bun
+24) Install Nvidia drivers
+25) View installation log
  0) Exit
 ```
 

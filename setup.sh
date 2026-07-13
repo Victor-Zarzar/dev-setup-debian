@@ -48,15 +48,16 @@ show_menu() {
     echo "13) Install browsers"
     echo "14) Install fonts"
     echo "15) Install system tools"
-    echo "16) Install Flatpak applications"
-    echo "17) Install databases"
-    echo "18) Install Homebrew"
-    echo "19) Install Homebrew packages"
-    echo "20) Install Zsh"
-    echo "21) Configure Git"
-    echo "22) Install Bun"
-    echo "23) Install Nvidia drivers"
-    echo "24) View installation log"
+    echo "16) Install utility tools"
+    echo "17) Install Flatpak applications"
+    echo "18) Install databases"
+    echo "19) Install Homebrew"
+    echo "20) Install Homebrew packages"
+    echo "21) Install Zsh"
+    echo "22) Configure Git"
+    echo "23) Install Bun"
+    echo "24) Install Nvidia drivers"
+    echo "25) View installation log"
     echo "0)  Exit"
     echo ""
     echo -n "Choose an option: "
@@ -72,6 +73,7 @@ run_full_setup() {
     install_git
     install_editors
     install_security_tools
+    install_utility_tools
     install_devops_tools
     install_python_env
     install_snap_apps
@@ -135,8 +137,8 @@ main() {
             13) install_browsers ;;
             14) install_fonts ;;
             15) install_system_tools ;;
-            16) install_flatpak_apps ;;
-            17) install_databases ;;
+            16) install_utility_tools ;;
+            17) install_flatpak_apps ;;
             18) install_homebrew ;;
             19) install_brew_packages ;;
             20) install_zsh ;;

@@ -92,6 +92,34 @@ install_browsers() {
     fi
 }
 
+install_utility_tools() {
+    print_section "Installing Utility Tools"
+
+    if ! dpkg -l | grep -q "^ii  kdiskmark"; then
+        run_command "sudo apt install -y kdiskmark" "Disk benchmark tool installed"
+    else
+        print_info "KDiskMark already installed"
+    fi
+
+    if ! command -v balena-etcher &> /dev/null; then
+        print_info "Downloading Balena Etcher from GitHub..."
+        ETCHER_URL=$(curl -s https://api.github.com/repos/balena-io/etcher/releases/latest | grep "browser_download_url.*amd64.deb" | cut -d '"' -f 4)
+
+        if [ -n "$ETCHER_URL" ]; then
+            if wget -q "$ETCHER_URL" -O /tmp/balena-etcher.deb >> "$LOG_FILE" 2>&1; then
+                run_command "sudo apt install -y /tmp/balena-etcher.deb" "Balena Etcher installed"
+                rm -f /tmp/balena-etcher.deb
+            else
+                print_error "Failed to download Balena Etcher"
+            fi
+        else
+            print_error "Failed to find Balena Etcher download URL"
+        fi
+    else
+        print_info "Balena Etcher already installed"
+    fi
+}
+
 install_system_tools() {
     print_section "Installing System Tools"
 
