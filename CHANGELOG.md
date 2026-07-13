@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.0](https://github.com/Victor-Zarzar/dev-setup-debian/compare/v1.1.0...v1.2.0) (2026-07-13)
+
+
+### Features
+
+* add new packages ([0a60705](https://github.com/Victor-Zarzar/dev-setup-debian/commit/0a60705701c5079f5fc7662e1aef8aa30549f548))
+* add new packages and update readme. ([ef0150a](https://github.com/Victor-Zarzar/dev-setup-debian/commit/ef0150a4e8223651e028932898c9729d031978b3))
+* add new packages and update readme. ([ef0150a](https://github.com/Victor-Zarzar/dev-setup-debian/commit/ef0150a4e8223651e028932898c9729d031978b3))
+
 ## [1.1.0](https://github.com/Victor-Zarzar/dev-setup-debian/compare/v1.0.0...v1.1.0) (2026-07-10)
 
 
