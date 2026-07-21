@@ -19,6 +19,7 @@ install_flatpak_apps() {
         "org.libreoffice.LibreOffice:LibreOffice"
         "io.github.thetumultuousunicornofdarkness.cpu-x:CPU-X"
         "com.github.jeromerobert.pdfarranger:PDF Arranger"
+        "org.gnome.Boxes:Boxes"
     )
 
     for app in "${apps[@]}"; do
