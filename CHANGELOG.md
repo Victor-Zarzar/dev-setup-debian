@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/Victor-Zarzar/dev-setup-debian/compare/v1.2.0...v1.2.1) (2026-07-21)
+
+
+### Bug Fixes
+
+* nvidia.sh ([ffbf817](https://github.com/Victor-Zarzar/dev-setup-debian/commit/ffbf817616ba6c3ab20024e12a44c8dddf9c9f32))
+* nvidia.sh ([0c33ad6](https://github.com/Victor-Zarzar/dev-setup-debian/commit/0c33ad6a536e99262f2b64b758ae8778c939ef39))
+
 ## [1.2.0](https://github.com/Victor-Zarzar/dev-setup-debian/compare/v1.1.0...v1.2.0) (2026-07-13)
 
 
