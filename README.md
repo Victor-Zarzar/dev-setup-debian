@@ -48,7 +48,7 @@ A modular, idempotent automated setup script for Debian/Ubuntu that installs and
 ### Applications
 
 - **Snap**: Postman, Figma-App, Proton VPN, Notion, Trello, WhatsApp, Slack, Telegram, Sidra (Apple Music)
-- **Flatpak**: LibreOffice, CPU-X, PDF Arranger
+- **Flatpak**: LibreOffice, CPU-X, PDF Arranger, Boxes (VM manager)
 - **Browsers**: Firefox, Google Chrome, Brave
 
 ### Graphics & Drivers

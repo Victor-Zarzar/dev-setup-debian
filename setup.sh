@@ -21,6 +21,7 @@ source "$SCRIPT_DIR/lib/docker.sh"
 source "$SCRIPT_DIR/lib/devops.sh"
 source "$SCRIPT_DIR/lib/git.sh"
 source "$SCRIPT_DIR/lib/nvidia.sh"
+source "$SCRIPT_DIR/lib/utils.sh"
 
 # ============================================
 # Interactive Menu
@@ -139,13 +140,14 @@ main() {
             15) install_system_tools ;;
             16) install_utility_tools ;;
             17) install_flatpak_apps ;;
-            18) install_homebrew ;;
-            19) install_brew_packages ;;
-            20) install_zsh ;;
-            21) configure_git ;;
-            22) install_bun ;;
-            23) install_nvidia_drivers ;;
-            24) cat "$LOG_FILE" | less ;;
+            18) install_databases ;;
+            19) install_homebrew ;;
+            20) install_brew_packages ;;
+            21) install_zsh ;;
+            22) configure_git ;;
+            23) install_bun ;;
+            24) install_nvidia_drivers ;;
+            25) cat "$LOG_FILE" | less ;;
             0)
                 print_success "Goodbye!"
                 log_action "Script finished"
