@@ -39,7 +39,7 @@ A modular, idempotent automated setup script for Debian/Ubuntu that installs and
 - Python: Pip, Venv, FastAPI, Uvicorn, Pyenv
 - Build tools: CMake, Automake, Ninja, Clang
 - OpenJDK 21, Nginx, OpenSSH Server
-- DevOps: kubectl, Minikube, eksctl, Terraform, Prometheus, Aws-cli
+- DevOps: kubectl, Minikube, eksctl, Terraform, Prometheus, Aws-cli, Azure CLI, Ansible
 
 ### Databases
 

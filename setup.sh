@@ -45,7 +45,7 @@ show_menu() {
     echo "9)  Install Snap applications"
     echo "10) Install Node.js tools"
     echo "11) Install Docker"
-    echo "12) Install DevOps tools (Prometheus, Terraform, AWS CLI, kubectl, Minikube, eksctl)"
+    echo "12) Install DevOps tools (Prometheus, Terraform, AWS CLI, Azure CLI, Ansible, kubectl, Minikube, eksctl)"
     echo "13) Install browsers"
     echo "14) Install fonts"
     echo "15) Install system tools"
