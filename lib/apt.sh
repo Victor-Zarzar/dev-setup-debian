@@ -52,7 +52,27 @@ install_python_env() {
         print_info "FastAPI and Uvicorn already installed"
     fi
 
-    print_info "Pyenv will be installed via Homebrew (option 18)"
+    if command -v leme &> /dev/null; then
+        print_info "Leme already installed ($(leme --version 2>&1))"
+    else
+        if command -v pipx &> /dev/null; then
+            run_command "pipx install leme" "Leme DevOps CLI installed (pipx)"
+        elif command -v pip3 &> /dev/null; then
+            run_command "pip3 install --user --break-system-packages leme" "Leme DevOps CLI installed (pip3)"
+        else
+            print_error "Neither pipx nor pip3 found - cannot install Leme"
+        fi
+
+        export PATH="$HOME/.local/bin:$PATH"
+
+        if command -v leme &> /dev/null; then
+            print_success "Leme verified: $(leme --version 2>&1)"
+            log_action "Leme installed and verified ($(leme --version 2>&1))"
+        else
+            print_error "Leme was installed but isn't on PATH yet. Add \$HOME/.local/bin to your PATH (restart terminal), then re-run this option."
+            log_action "Leme install completed but verification failed - PATH issue likely"
+        fi
+    fi
 
     log_action "Python environment configured"
 }

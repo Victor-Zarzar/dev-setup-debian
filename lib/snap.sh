@@ -26,7 +26,7 @@ install_snap_apps() {
         "whatsapp-linux-desktop:WhatsApp"
         "android-studio --classic:Android Studio"
         "brave:Brave"
-        "sidra:Sidra"
+        "spotify:Spotify"
         "slack --classic:Slack"
         "telegram-desktop:Telegram"
         "figma-linux:Figma"

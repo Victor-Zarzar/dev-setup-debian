@@ -41,7 +41,7 @@ install_nvidia_drivers() {
         fi
     fi
 
-    local distro=$(detect_distro)
+    local distro=$(get_os_version)
     print_info "Detected distribution: $distro"
 
     if [ "$distro" = "ubuntu" ] || [ "$distro" = "neon" ] || [ "$distro" = "pop" ] || [ "$distro" = "linuxmint" ]; then

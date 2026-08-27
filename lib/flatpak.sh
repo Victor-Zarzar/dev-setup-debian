@@ -7,6 +7,11 @@
 install_flatpak_apps() {
     print_section "Installing Flatpak Applications"
 
+    if ! command -v flatpak &> /dev/null; then
+        print_info "Flatpak not found, installing..."
+        run_command "sudo apt-get update && sudo apt-get install -y flatpak" "Flatpak installed"
+    fi
+
     print_info "Adding Flathub repository..."
     if flatpak remote-list | grep -q "flathub"; then
         print_info "Flathub repository already added"
